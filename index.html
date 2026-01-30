@@ -182,7 +182,9 @@ If not no problem at all.<br><br>\
 Please sleep now<br>\
 Sleep tight and sweetest dreams<br>\
 Take care princess 😘<br><br>\
-<button onclick='playVoice()'>🎤 Tap to hear me</button><br><br>\
+<audio id="voice" src="voive.mp3.mpeg"></audio>
+<button onclick="document.getElementById('voice').play()">🎤 Tap to hear me</button>
+
 Reddy will always be with his chaddi<br>\
 (my princess)<br>\
 I looooove you soooo sooooooo so much 💕"
@@ -197,10 +199,4 @@ function next() {
   }
 }
 
-function playVoice() {
-  const voice = new Audio("./voice.mp3.mpeg");
-  voice.play().catch(() => {
-    alert("Tap again to hear me 💗");
-  });
-}
 </script>
