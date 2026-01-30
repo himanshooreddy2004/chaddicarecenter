@@ -117,7 +117,7 @@ const screens = [
     text: "This is a small quiet place<br>for you when things feel too heavy."
   },
   {
-    title: "Take a breath my cutie pie 🥺",
+    title: "Take a breath, my cutie pie 🥺",
     text: "Some days are exhausting<br>\
 even when you r doing nothing wrong.<br><br>\
 I understand that and im always with you.<br>\
@@ -135,8 +135,8 @@ Thinking too much<br>\
 Feeling overwhelmed by words that hurt"
   },
   {
-    title: "Diagnosis ❤️",
-    text: "Sometimes appa and amma get serious and scold<br>\
+    title: "Diagnosis ❤️ >",
+    text: "Sometimes Appa and Amma get serious and scold<br>\
 for things we aren’t actually wrong about.<br>\
 That can feel really heavy inside<br>\
 and yes… it can make us angry too.<br><br>\
@@ -159,7 +159,7 @@ slowly slowly helping you forget<br>\
 the things that have been hard on you."
   },
   {
-    title: "One thing you should know 🌷",
+    title: "One thing you should know 😊",
     text: "I’m always grateful that you came into my life.<br><br>\
 Through everything im going to be with you always.<br>\
 Whenever things get hard you r not alone princess.<br>\
@@ -172,9 +172,9 @@ No matter what ill be there for you <br>\
 every day, every second.<br>\
 That’s my promise 😘"
   },
- {
-  title: "Very good night my princess 🌙",
-  text: "Don’t think too much.<br>\
+  {
+    title: "Very good night my princess 🌙",
+    text: "Don’t think too much.<br>\
 I really hope and wish that you r smiling by the end of this.<br>\
 If you r smiling even a little now that’s enough princess 😁<br><br>\
 If possible adhre call maadi.<br>\
@@ -186,8 +186,7 @@ Take care princess 😘<br><br>\
 Reddy will always be with his chaddi<br>\
 (my princess)<br>\
 I looooove you soooo sooooooo so much 💕"
-}
-
+  }
 ];
 
 function next() {
@@ -197,7 +196,11 @@ function next() {
     document.getElementById("text").innerHTML = screens[step].text;
   }
 }
-</script>
 
-</body>
-</html>
+function playVoice() {
+  const voice = new Audio("./voice.mp3.mpeg");
+  voice.play().catch(() => {
+    alert("Tap again to hear me 💗");
+  });
+}
+</script>
