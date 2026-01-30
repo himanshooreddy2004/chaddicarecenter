@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Chaddi Care Center 🩷</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe6f0, #f3e8ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  border-radius: 22px;
+  padding: 28px;
+  max-width: 360px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  color: #ff6b9c;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.subheader {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.emoji {
+  font-size: 72px;
+  position: relative;
+  top: -220px;
+  animation:
+    drop 1.2s ease-out forwards,
+    float 2.4s ease-in-out infinite 1.2s;
+}
+
+@keyframes drop {
+  to { top: 0; }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+h2 {
+  margin: 14px 0 8px;
+  color: #333;
+}
+
+p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+button {
+  margin-top: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  background: #ff6b9c;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff4f89;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="header">🚨 Emergency Chaddi Care Center 🚨</div>
+  <div class="subheader">soft support unit</div>
+
+  <div class="emoji">🩲</div>
+
+  <h2 id="title">Hi chaddi 😌</h2>
+  <p id="text">
+ I know im far and i wish i could<br>
+come and hold you in my arms right now.<br><br>
+So i made this small quiet place<br>
+for you, for moments when things feel too heavy.
+
+  </p>
+
+  <button onclick="next()">Enter gently my princess 🌸</button>
+</div>
+
+<script>
+let step = 0;
+
+const screens = [
+  {
+    title: "Hi chaddi your reddy here.. 😌",
+    text: "This is a small quiet place<br>for you when things feel too heavy."
+  },
+  {
+    title: "Take a breath, my cutie pie 🥺",
+text: "Some days are exhausting<br>
+even when you r doing nothing wrong.<br><br>
+I understand that and im always with you.<br>
+Since i can’t teleport right now 😭<br>
+this is just something small<br>
+to make you smile a little."
+
+  },
+  {
+   title: "System scan 🧠",
+text: "Results detected:<br>
+ You are doing your best<br>
+ Wanting some peace<br>
+ Carrying more than you should<br>
+ Thinking too much<br>
+ Feeling overwhelmed by words that hurt"
+
+  },
+  {
+title: "Diagnosis 🤍",
+text: "Sometimes Appa and Amma get serious and scold<br>
+for things we aren’t actually wrong about.<br>
+That can feel really heavy inside<br>
+and yes… it can make us angry too.<br><br>
+You r human princess.<br>
+It’s truly okay to feel like this.<br><br>
+You r not weak at all —<br>
+my strong cute little baby princess 👸"
+
+  },
+  {
+  title: "Prescribed treatment 🫂",
+text: "<b>Unlimited slow hugs</b><br>
+Just a few more years of these imagination hugs and cuddles.<br>
+After that ill always be next to you to take care of you<br><br>
+Okay… now slowly imagine this princess:<br>
+Im sleeping right next to you<br>
+cuddling you gently<br>
+slowly curling your hair<br>
+soft kisses on your forehead and cheeks<br>
+slowly slowly helping you forget<br>
+the things that have been hard on you."
+
+  {
+    title: "One thing you should know 🌷",
+text: "I’m always grateful that you came into my life.<br><br>
+Through everything im going to be with you always.<br>
+Whenever things get hard you r not alone princess.<br>
+Im right here with you.<br><br>
+Sometimes i might not know the exact words<br>
+that will make you feel better<br>
+but i promise ill try my best to understand<br>
+and feel things with you<br><br>
+No matter what ill be there for you —<br>
+every day, every second.<br>
+That’s my promise 😘"
+
+  },
+  {
+  title: "Very good night my princess 🌙",
+text: "Don’t think too much.<br>
+I really hope and wish that you r smiling by the end of this.<br>
+If you r smiling even a little now that’s enough princess 😁<br><br>
+If possible adhre call maadi.<br>
+If not no problem at all.<br><br>
+Please sleep now<br>
+Sleep tight and sweetest dreams<br>
+Take care princess😘<br><br>
+Reddy will always be with his chaddi<br>
+(my princess)<br>
+I looooove you soooo sooooooo so much 💕"
+
+];
+
+function next() {
+  step++;
+  if (step < screens.length) {
+    document.getElementById("title").innerHTML = screens[step].title;
+    document.getElementById("text").innerHTML = screens[step].text;
+  }
+}
+</script>
+
+</body>
+</html>
